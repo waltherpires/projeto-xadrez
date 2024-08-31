@@ -1,4 +1,6 @@
-﻿namespace tabuleiro
+﻿using xadrez;
+
+namespace tabuleiro
 {
     abstract class Peca
     {
@@ -18,6 +20,11 @@
         public void incrementarQteMovimentos()
         {
             qtdMovimentos++; 
+        }
+
+        public void decrementarQteMovimentos()
+        {
+            qtdMovimentos--;
         }
 
         public bool existeMovimentosPossiveis()
