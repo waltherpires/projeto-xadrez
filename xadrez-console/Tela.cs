@@ -24,7 +24,6 @@ namespace xadrez_console
             ConsoleColor fundoOriginal = Console.BackgroundColor;
             ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
 
-
             for (int i = 0; i < tab.linhas; i++)
             {
                 Console.Write(8 - i + " ");
