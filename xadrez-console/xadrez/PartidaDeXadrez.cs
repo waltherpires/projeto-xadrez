@@ -148,9 +148,28 @@ namespace xadrez
                 {
                     p = tab.retirarPeca(destino);
                     pecas.Remove(p);
-                    Peca dama = new Dama(tab, p.cor);
-                    tab.colocarPeca(dama, destino);
-                    pecas.Add(dama);
+                    Peca peca;
+                    Console.Write("Promover para Dama/Cavalo/Bispo/Torre (D,C,B,T): ");
+                    char c = char.Parse(Console.ReadLine());
+                    if(c == 'C' || c == 'c')
+                    {
+                        peca = new Cavalo(tab, p.cor);
+                    }
+                    else if(c == 'B' || c == 'b')
+                    {
+                        peca = new Bispo(tab, p.cor);
+                    }
+                    else if (c == 'T' || c == 't')
+                    {
+                        peca = new Torre(tab, p.cor);
+                    }
+                    else
+                    {
+                        peca = new Dama(tab, p.cor);
+                    }
+
+                    tab.colocarPeca(peca, destino);
+                    pecas.Add(peca);
                 }
             }
 
